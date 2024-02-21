@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
-
-const schema = new mongoose.Schema({
-    name: String,
+const user = new mongoose.Schema({
+    name:  {
+        type: String,
+    },
     email: {
         type: String,
         required: true,
@@ -17,4 +18,4 @@ const schema = new mongoose.Schema({
         default: Date.now,
     }
 })
-export const User = mongoose.model("User", schema)
+export const User = mongoose.model("todolists",   user)

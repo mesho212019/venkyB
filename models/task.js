@@ -1,13 +1,12 @@
 import mongoose from "mongoose";
-
 const schema = new mongoose.Schema({
     title: {
-        String,
-        required: true,
+        type: String,
+        required: false,
     },
     description: {
         type: String, 
-        required: true,
+        required: false,
     },
     isCompleted: {
         type: Boolean,
@@ -24,3 +23,4 @@ const schema = new mongoose.Schema({
     }
 })
 export const Task = mongoose.model("Task", schema)
+
